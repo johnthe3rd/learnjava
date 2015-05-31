@@ -15,8 +15,7 @@ public class Greeting{
         //System.out.println("Hello, " + greetingTargets.get(greetingTargets.size()-1) + "!");
         
         //not a scaleable solution. will become hard to read with multiple arguments and difficult to test. 
-        String Target;
-	Target = (args.length > 0) ? args[0] : "World";
+        String Target = (args.length > 0) ? args[0] : "World";
         System.out.println("Hello, " + Target + "!");
     }
 }
