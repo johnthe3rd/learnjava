@@ -9,13 +9,21 @@ public class Greeting{
 
         //greetingTargets.add("World"); // [0]
         //if (args.length > 0){
-            //greetingTargets.add(args[0]);
+        //greetingTargets.add(args[0]);
         //}
         
         //System.out.println("Hello, " + greetingTargets.get(greetingTargets.size()-1) + "!");
         
         //not a scaleable solution. will become hard to read with multiple arguments and difficult to test. 
-        String Target = (args.length > 0) ? args[0] : "World";
+	String Target = (args.length > 0) ? args[0] : "World";
+	for (int i = 0; i<Target.length();){
+	    char ch = Target.charAt(i);
+            if (Character.isLetter(ch)){
+                i++;
+            }else{
+                Target = "World";
+                } 
+	    }
         System.out.println("Hello, " + Target + "!");
     }
 }
